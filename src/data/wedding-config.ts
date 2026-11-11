@@ -324,7 +324,7 @@ export const WEDDING_CONFIG: WeddingConfig = {
     },
   ],
   music: {
-    src: "/music/beautiful-in-white1.mp3",
+    src: "/music/beautiful-in-white.mp3",
     autoplay: true,
   },
   labels: {
