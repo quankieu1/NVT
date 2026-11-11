@@ -181,8 +181,8 @@ export const WEDDING_CONFIG: WeddingConfig = {
   coverPhoto: {
     src: "/uploads/cmum7s7rr002q8k3cioxfsj2a/1.png",
     alt: "Văn Tuấn và Như Quỳnh",
-    width: 2200,
-    height: 3300,
+    width: 455,
+    height: 617,
   },
   events: {
     ceremony: {
@@ -385,7 +385,7 @@ export const WEDDING_CONFIG: WeddingConfig = {
       vi: "Trân trọng cảm ơn",
       message: "",
     },
-    footerCredit: "THIỆP CƯỚI HÀ ĐÔNG",
+    footerCredit: "THIỆP CƯỚI ĐÌNH QUÂN - THẠCH THẤT",
   },
   initialGuestbookEntries: [],
 };
