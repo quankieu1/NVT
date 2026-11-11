@@ -76,9 +76,13 @@ function doGet(e) {
     for (let i = rows.length - 1; i >= 1; i--) {
       const row = rows[i];
       if (row[2] && row[3]) {
+        let createdIso = new Date().toISOString();
+        if (row[1] instanceof Date && !isNaN(row[1].getTime())) {
+          createdIso = row[1].toISOString();
+        }
         entries.push({
           id: String(row[0] || "wish-" + i),
-          createdAt: row[1] ? new Date(row[1]).toISOString() : new Date().toISOString(),
+          createdAt: createdIso,
           authorName: String(row[2]),
           message: String(row[3])
         });
@@ -154,11 +158,6 @@ function doPost(e) {
         guestSide,
         message
       ]);
-
-      // Nếu khách có để lại lời chúc trong form RSVP thì tự động thêm luôn vào Sổ Lưu Bút
-      if (message) {
-        wishSheet.appendRow([id + "-w", now, guestName, message]);
-      }
 
       return ContentService.createTextOutput(
         JSON.stringify({

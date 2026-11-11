@@ -387,25 +387,6 @@ export const WEDDING_CONFIG: WeddingConfig = {
     },
     footerCredit: "THIỆP CƯỚI HÀ ĐÔNG",
   },
-  initialGuestbookEntries: [
-    {
-      id: "cmuzjhm6h0007gg3civ3lwgze",
-      authorName: "Thanh Mai",
-      message: "Cô dâu xinh iu lắm! Chúc dâu mãi mãi hạnh phúc 😘",
-      createdAt: "2026-11-08T12:55:30.953Z",
-    },
-    {
-      id: "cmup36mki003r7s3c1yjgj8py",
-      authorName: "Lê Tất Thắng",
-      message: "Chúc vợ chồng trăm năm hạnh phúc nhé!!!!!",
-      createdAt: "2026-11-01T05:21:22.626Z",
-    },
-    {
-      id: "cmumlybl7003y8k3c8lcm02t8",
-      authorName: "Anh Phạm Văn Thanh",
-      message: "Chúc em hạnh phúc",
-      createdAt: "2026-11-29T11:43:29.323Z",
-    },
-  ],
+  initialGuestbookEntries: [],
 };
 
