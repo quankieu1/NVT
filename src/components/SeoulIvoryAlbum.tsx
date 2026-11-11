@@ -86,7 +86,7 @@ export function SeoulIvoryAlbum({
         {chunks.map(([hero, ...pair], groupIdx) => {
           const baseIndex = groupIdx * 3;
           return (
-            <div key={hero.src} className="flex flex-col gap-4 sm:gap-5">
+            <div key={`group-${groupIdx}`} className="flex flex-col gap-4 sm:gap-5">
               <AlbumTile
                 photo={hero}
                 photoIndex={baseIndex}
@@ -99,7 +99,7 @@ export function SeoulIvoryAlbum({
                 <div className="grid grid-cols-2 items-start gap-3 sm:gap-4">
                   {pair.map((p, idx) => (
                     <AlbumTile
-                      key={p.src}
+                      key={`tile-${baseIndex + 1 + idx}`}
                       photo={p}
                       photoIndex={baseIndex + 1 + idx}
                       aspect="3 / 4"
