@@ -16,9 +16,12 @@ export async function GET() {
       if (res.ok) {
         const json = await res.json();
         if (Array.isArray(json.entries)) {
+          const cleanEntries = json.entries.filter(
+            (item: GuestbookEntry) => !String(item?.id ?? "").endsWith("-w")
+          );
           return NextResponse.json({
             status: "success",
-            entries: [...json.entries, ...WEDDING_CONFIG.initialGuestbookEntries],
+            entries: [...cleanEntries, ...WEDDING_CONFIG.initialGuestbookEntries],
           });
         }
       }
